@@ -28,7 +28,7 @@ public class UpwardMovement : MonoBehaviour
         }
         if (flag == 1)
         {
-            rb.AddForce(Vector2.up * vel, ForceMode2D.Force);
+            rb.AddForce(Vector2.up * (vel + 5.0f), ForceMode2D.Force);
             rb.AddForce(v * vel/2, ForceMode2D.Force);
         }
         
