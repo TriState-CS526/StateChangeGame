@@ -11,12 +11,12 @@ public class UpwardMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    public Rigidbody2D rb;
     public float vel = 1.2f;
     public int flag = 0;
     private Vector2 v = new Vector2(1, -1);
     void Update()
     {
+        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         if(Input.GetKeyDown(KeyCode.S))
         {
             
@@ -28,8 +28,8 @@ public class UpwardMovement : MonoBehaviour
         }
         if (flag == 1)
         {
-            rb.AddForce(Vector2.up * (vel + 10.0f), ForceMode2D.Force);
-            rb.AddForce(v * vel*3, ForceMode2D.Force);
+            rb.AddForce(Vector2.up * vel, ForceMode2D.Force);
+            rb.AddForce(v * vel, ForceMode2D.Force);
         }
         
     }

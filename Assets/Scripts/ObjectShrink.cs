@@ -23,13 +23,13 @@ public class ObjectShrink : MonoBehaviour
             {
                 // Shrink the object back to its original size
                 transform.localScale = originalScale;
-                gameObject.GetComponent<Rigidbody2D>().mass *= 2f;
+                gameObject.GetComponent<Rigidbody2D>().mass = 1.5f;
             }
             else
             {
                 // Enlarge the object
                 transform.localScale /= 2f; // You can adjust the scaling factor as needed
-                gameObject.GetComponent<Rigidbody2D>().mass *= 0.5f;
+                gameObject.GetComponent<Rigidbody2D>().mass = 0.5f;
             }
 
             // Toggle the state
