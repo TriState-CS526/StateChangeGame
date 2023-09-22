@@ -9,10 +9,11 @@ public class TimerComponent : MonoBehaviour
     public float time = 0;
     // Update is called once per frame
     public TextMeshProUGUI timeText;
-
+    public bool over=false;
     void Update()
     {
-        time += Time.deltaTime;
+        if(!over)
+            time += Time.deltaTime;
         DisplayTime(time);
     }
     void DisplayTime(float time)

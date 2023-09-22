@@ -20,10 +20,14 @@ public class FinishRace : MonoBehaviour
     public TextMeshProUGUI endText;
     public GameObject but1;
     public GameObject but2;
+    public TextMeshProUGUI timer;
     void OnCollisionEnter2D(Collision2D collision)
     {
         endText.text = string.Format("Congratulations!");
         but1.SetActive(true);
         if(but2 != null) but2.SetActive(true);
+        timer.GetComponent<TimerComponent>().over = true;
+        
+
     }
 }
