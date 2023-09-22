@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.localScale = new Vector3(enlargedScale, enlargedScale, enlargedScale);
                 rb.mass = enlargedMass;
+                isFlying = false;
             }
             else
             {
@@ -41,12 +42,23 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            isFlying = !isFlying;
+            /*if (!isEnlarged)
+                isFlying = !isFlying;*/
+            if(!isEnlarged)
+                isFlying = true;
         }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            /*if (!isEnlarged)
+                isFlying = !isFlying;*/
+            isFlying = false;
+        }
+
         if (isFlying)
         {
             rb.AddForce(Vector2.up * upwardForce, ForceMode2D.Force);
             rb.AddForce(Vector2.right * rightwardForce, ForceMode2D.Force);
         }
+       
     }
 }
