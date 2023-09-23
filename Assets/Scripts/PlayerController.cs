@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isEnlarged = true;
     public bool isFlying = false;
+    public bool isFrozen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,41 +25,44 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(!isFrozen)
         {
-            isEnlarged = !isEnlarged;
-
-            if (isEnlarged)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                transform.localScale = new Vector3(enlargedScale, enlargedScale, enlargedScale);
-                rb.mass = enlargedMass;
+                isEnlarged = !isEnlarged;
+
+                if (isEnlarged)
+                {
+                    transform.localScale = new Vector3(enlargedScale, enlargedScale, enlargedScale);
+                    rb.mass = enlargedMass;
+                    isFlying = false;
+                }
+                else
+                {
+                    transform.localScale = new Vector3(smallScale, smallScale, smallScale);
+                    rb.mass = smallMass;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                /*if (!isEnlarged)
+                    isFlying = !isFlying;*/
+                if (!isEnlarged)
+                    isFlying = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                /*if (!isEnlarged)
+                    isFlying = !isFlying;*/
                 isFlying = false;
             }
-            else
+
+            if (isFlying)
             {
-                transform.localScale = new Vector3(smallScale, smallScale, smallScale);
-                rb.mass = smallMass;
+                rb.AddForce(Vector2.up * upwardForce, ForceMode2D.Force);
+                rb.AddForce(Vector2.right * rightwardForce, ForceMode2D.Force);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            /*if (!isEnlarged)
-                isFlying = !isFlying;*/
-            if(!isEnlarged)
-                isFlying = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            /*if (!isEnlarged)
-                isFlying = !isFlying;*/
-            isFlying = false;
-        }
-
-        if (isFlying)
-        {
-            rb.AddForce(Vector2.up * upwardForce, ForceMode2D.Force);
-            rb.AddForce(Vector2.right * rightwardForce, ForceMode2D.Force);
-        }
-       
+            
     }
 }

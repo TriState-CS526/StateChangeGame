@@ -1466,6 +1466,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1561,6 +1562,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 401603136}
   offset: {x: 5, y: 0, z: -60}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab06bd5adcf22714995401a38d30cebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &529135737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,6 +4809,22 @@ PrefabInstance:
     - target: {fileID: 1839103378029296422, guid: a3b1a5964d98dbf41b386ca46ef2b10c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952318996206520603, guid: a3b1a5964d98dbf41b386ca46ef2b10c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420034}
+    - target: {fileID: 6952318996206520603, guid: a3b1a5964d98dbf41b386ca46ef2b10c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMedium
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458286508077979677, guid: a3b1a5964d98dbf41b386ca46ef2b10c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420034}
+    - target: {fileID: 7458286508077979677, guid: a3b1a5964d98dbf41b386ca46ef2b10c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadExtreme
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
