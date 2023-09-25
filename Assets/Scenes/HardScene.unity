@@ -3792,6 +3792,7 @@ GameObject:
   - component: {fileID: 740999299}
   - component: {fileID: 740999298}
   - component: {fileID: 740999302}
+  - component: {fileID: 740999303}
   m_Layer: 0
   m_Name: Triangle 2
   m_TagString: Untagged
@@ -3986,6 +3987,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &740999303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740999297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52717643d32e18c4a922f8a9adf6de59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &815701824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,7 +4946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -131.45569
+      value: -132.13
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5748,7 +5761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -203.0988
+      value: -203.2
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7227,7 +7240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.44225
+      value: -23.02
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10741,7 +10754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -55.20977
+      value: -55.78
       objectReference: {fileID: 0}
     - target: {fileID: 8777412924649206373, guid: 1062094422c08f949b6b83317f5ca151, type: 3}
       propertyPath: m_LocalPosition.z
