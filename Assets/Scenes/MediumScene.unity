@@ -1293,9 +1293,10 @@ MonoBehaviour:
   enlargedScale: 3
   smallMass: 0.5
   enlargedMass: 500
-  upwardForce: 0.5
-  rightwardForce: 0.5
+  upwardForce: 10
+  rightwardForce: 10
   isFlying: 0
+  isFrozen: 0
 --- !u!1 &490908310
 GameObject:
   m_ObjectHideFlags: 0
